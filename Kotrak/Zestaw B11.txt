@@ -1,0 +1,5 @@
+DECLARE @PageSize int = 1000
+select * from Sales.SalesOrderHeader
+order by SalesOrderID
+OFFSET (@PageSize) ROWS
+FETCH NEXT @PageSize rows only
